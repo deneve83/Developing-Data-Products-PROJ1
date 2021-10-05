@@ -1,0 +1,32 @@
+---
+title: "Developing Data Products W2"
+author: "DRD"
+date: "10/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Create a web page using R Markdown that features a map created with Leaflet. Host your webpage on GitHub. Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. 
+
+install.packages("jsonlite")
+install.packages("leaflet")
+
+Today's Date of assignment submission is 05 October, 2021.
+
+```{r create mat}
+library(leaflet)
+library(jsonlite)
+my_map <- leaflet() %>% addTiles()
+my_map <- my_map %>%
+  addMarkers(lat=41.3909, lng=-73.9555,
+            popup="<a href='https://www.westpoint.edu/'> DRD's Office </a>")
+my_map
+
+```
+
+## This concludes my assignment. A leaflet with 1 marker, and a popup with a link to my organization.
